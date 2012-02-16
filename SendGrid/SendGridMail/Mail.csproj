@@ -30,8 +30,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SendGridKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CodeScales.Http, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="CodeScales.Http, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f5e84d704ed5c70e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\CodeScales.Http.dll</HintPath>
     </Reference>
@@ -60,6 +66,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="lib\CodeScales.Http.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SendGridKey.snk" />
+    <None Include="SendGridKeyFile.pfx" />
+    <None Include="test.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
